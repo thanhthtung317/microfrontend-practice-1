@@ -11,8 +11,9 @@ module.exports = {
       name: 'cart',
       filename: 'remoteEntry.js',
       exposes: {
-        './cartIndex': './src/index',
+        './cartIndex': './src/bootstrap',
       },
+      shared: ['@faker-js/faker'],
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
